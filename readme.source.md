@@ -370,8 +370,9 @@
 
 ```aura width=130 height=44 link="https://www.linkedin.com/in/lithin-jose" inline align=center
 <SocialMediaButton
-  icon="https://raw.githubusercontent.com/l1thin/l1thin/main/icons/linkedin-icon.svg"
-  text="Linkedin"
+  icon="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+  text="LinkedIn"
+  iconSize="1"
   backgroundColor="#000000"
   width={130}
   height={44}
@@ -381,6 +382,42 @@
     { offset: '60%', color: '#9d6bf0' },
     { offset: '80%', color: '#000000' },
     { offset: '100%', color: '#c89dfb' },
+  ]}
+/>
+```
+
+```aura width=110 height=44 link="mailto:lithinjosepulikkottil@gmail.com" inline align=center
+<SocialMediaButton
+  icon="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+  text="Email"
+  iconSize="1"
+  backgroundColor="#000000"
+  width={110}
+  height={44}
+  gradientStops={[
+    { offset: '0%', color: '#d855f7' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#b557e8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#cc6ef9' },
+  ]}
+/>
+```
+
+```aura width=130 height=44 link="https://www.instagram.com/l1thin.in" inline align=center
+<SocialMediaButton
+  icon="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+  text="Instagram"
+  iconSize="1"
+  backgroundColor="#000000"
+  width={130}
+  height={44}
+  gradientStops={[
+    { offset: '0%', color: '#f472b6' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#fb7eb8' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#f06aae' },
   ]}
 />
 ```
