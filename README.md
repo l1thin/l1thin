@@ -8,4 +8,3 @@
 <a href="https://www.linkedin.com/in/lithin-jose"><img src="./.github/assets/readme-aura-component-3-5b9d62fa.svg" width="120" height="44" /></a><a href="mailto:lithinjosepulikkottil@gmail.com"><img src="./.github/assets/readme-aura-component-4-4c90664c.svg" width="110" height="44" /></a><a href="https://www.instagram.com/l1thin.in"><img src="./.github/assets/readme-aura-component-5-11840b3c.svg" width="130" height="44" /></a>
 </p>
 
-<p align="center"><sub>𝗉𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href="https://github.com/collectioneur/readme-aura">𝗋𝖾𝖺𝖽𝗆𝖾-𝖺𝗎𝗋𝖺</a></sub></p>
