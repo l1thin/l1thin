@@ -386,6 +386,10 @@
 />
 ```
 
+```aura width=12 height=44 inline align=center
+<div style={{ width:12, height:44 }} />
+```
+
 ```aura width=110 height=44 link="mailto:lithinjosepulikkottil@gmail.com" inline align=center
 <SocialMediaButton
   icon="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
@@ -402,6 +406,10 @@
     { offset: '100%', color: '#cc6ef9' },
   ]}
 />
+```
+
+```aura width=12 height=44 inline align=center
+<div style={{ width:12, height:44 }} />
 ```
 
 ```aura width=130 height=44 link="https://www.instagram.com/l1thin.in" inline align=center
