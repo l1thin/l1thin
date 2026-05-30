@@ -385,38 +385,5 @@
 />
 ```
 
-```aura width=130 height=44 link="mailto:lithinjosepulikkottil@gmail.com" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/l1thin/l1thin/main/icons/gmail-icon.svg"
-  text="Email"
-  backgroundColor="#000000"
-  width={130}
-  height={44}
-  gradientStops={[
-    { offset: '0%', color: '#d855f7' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#b557e8' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#cc6ef9' },
-  ]}
-/>
-```
-
-```aura width=130 height=44 link="https://www.instagram.com/l1thin.in" inline align=center
-<SocialMediaButton
-  icon="https://raw.githubusercontent.com/l1thin/l1thin/main/icons/instagram-icon.svg"
-  text="Instagram"
-  backgroundColor="#000000"
-  width={130}
-  height={44}
-  gradientStops={[
-    { offset: '0%', color: '#f472b6' },
-    { offset: '30%', color: '#000000' },
-    { offset: '60%', color: '#fb7eb8' },
-    { offset: '80%', color: '#000000' },
-    { offset: '100%', color: '#f06aae' },
-  ]}
-/>
-```
 
 <p align="center"><sub>𝗉𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href="https://github.com/collectioneur/readme-aura">𝗋𝖾𝖺𝖽𝗆𝖾-𝖺𝗎𝗋𝖺</a></sub></p>
