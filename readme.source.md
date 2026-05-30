@@ -105,23 +105,38 @@
    <img src={github.user.avatarUrl} width={88} height={88} style={{ borderRadius: 44 }} />
  </div>
 
- <div style={{ display:'flex', flexDirection:'column', marginLeft:168, gap:8, zIndex: 10 }}>
+ <div style={{ display:'flex', flexDirection:'column', marginLeft:168, zIndex:10, gap:8 }}>
    <div style={{ display:'flex', fontSize:38, fontWeight:800, color:'#ffffff', letterSpacing:'-1px', lineHeight:1 }}>
      {github.user.name || github.user.login}
    </div>
    <div style={{ display:'flex', fontSize:15, color:'rgba(180,165,255,0.8)', fontWeight:400, letterSpacing:'0.3px' }}>
-     {github.user.bio || 'AI Engineer | ML Developer | Data Analyst'}
+     AI Engineer | ML Developer | Data Analyst
    </div>
-   <div style={{ display:'flex', gap:8, marginTop:6, flexWrap: 'wrap' }}>
-     {['Machine Learning', 'Deep Learning', 'Generative AI', 'NLP', 'Computer Vision', 'Data Science', 'Software Engineering'].map(function(tag) {
-       return (
-         <div key={tag} style={{
-           display:'flex', padding:'4px 12px', borderRadius:20,
-           background:'rgba(80,40,220,0.18)', border:'1px solid rgba(100,70,240,0.32)',
-           color:'rgba(205,195,255,0.85)', fontSize:12, fontWeight:600,
-         }}>{tag}</div>
-       );
-     })}
+   <div style={{ display:'flex', flexDirection:'column', gap:8, marginTop:4 }}>
+     <div style={{ display:'flex', gap:8 }}>
+       {['Machine Learning', 'Deep Learning', 'Generative AI', 'NLP'].map(function(tag) {
+         return (
+           <div key={tag} style={{
+             display:'flex', padding:'5px 14px', borderRadius:20, height:28,
+             alignItems:'center',
+             background:'rgba(80,40,220,0.18)', border:'1px solid rgba(100,70,240,0.32)',
+             color:'rgba(205,195,255,0.85)', fontSize:12, fontWeight:600, whiteSpace:'nowrap',
+           }}>{tag}</div>
+         );
+       })}
+     </div>
+     <div style={{ display:'flex', gap:8 }}>
+       {['Computer Vision', 'Data Science', 'Software Engineering'].map(function(tag) {
+         return (
+           <div key={tag} style={{
+             display:'flex', padding:'5px 14px', borderRadius:20, height:28,
+             alignItems:'center',
+             background:'rgba(80,40,220,0.18)', border:'1px solid rgba(100,70,240,0.32)',
+             color:'rgba(205,195,255,0.85)', fontSize:12, fontWeight:600, whiteSpace:'nowrap',
+           }}>{tag}</div>
+         );
+       })}
+     </div>
    </div>
  </div>
 </div>
@@ -217,14 +232,14 @@
          <div key={s.label} style={{
            flexGrow: 1, display: 'flex', flexDirection: 'column',
            alignItems: 'center', justifyContent: 'center',
-           padding: '16px 8px',
+           padding: '20px 16px',
            borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
-           gap: 5,
+           gap: 6,
          }}>
-           <div style={{ display:'flex', fontSize:30, fontWeight:800, color:s.color, lineHeight:1 }}>
+           <div style={{ display:'flex', fontSize:32, fontWeight:800, color:s.color, lineHeight:1 }}>
              {s.value}
            </div>
-           <div style={{ display:'flex', fontSize:11, color:'rgba(200,195,225,0.45)', fontWeight:600, letterSpacing:'1.5px' }}>
+           <div style={{ display:'flex', fontSize:12, color:'rgba(200,195,225,0.45)', fontWeight:600, letterSpacing:'1.5px' }}>
              {s.label.toUpperCase()}
            </div>
          </div>
@@ -235,12 +250,12 @@
 })()
 ```
 
-```aura width=860 height=200
+```aura width=860 height=220
 (function() {
- var topLangs = github.languages.slice(0, 6).map(function(l) { return l.name; });
- var categories = [
-   { title: 'Languages', color: '#a78bfa', items: topLangs },
-   { title: 'Frameworks', color: '#60a5fa', items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'LangChain', 'Hugging Face', 'OpenCV', 'FastAPI', 'Flask', 'Streamlit', 'Pandas', 'NumPy'] },
+ var rows = [
+   ['Python', 'C', 'Java', 'JavaScript', 'R'],
+   ['OpenCV', 'CUDA', 'React Native', 'Keras', 'Matplotlib'],
+   ['NumPy', 'Pandas', 'PyTorch', 'Scikit-learn', 'SciPy'],
  ];
 
  return (
@@ -248,7 +263,7 @@
      width: '100%', height: '100%',
      background: '#08080c',
      display: 'flex', flexDirection: 'column',
-     fontFamily: 'Inter', padding: '18px 32px', gap: 14,
+     fontFamily: 'Inter', padding: '20px 32px', gap: 16,
      borderRadius: 16, border: '1px solid rgba(110,80,220,0.18)',
      position: 'relative', overflow: 'hidden',
    }}>
@@ -289,7 +304,7 @@
        `}
      </style>
 
-     <svg width="860" height="200" style={{ position: 'absolute', top: 0, left: 0 }}>
+     <svg width="860" height="220" style={{ position: 'absolute', top: 0, left: 0 }}>
        <defs>
          <radialGradient id="g1" cx="50%" cy="50%" r="50%">
            <stop offset="0%" stopColor="rgba(115,20,215,0.68)" />
@@ -319,35 +334,31 @@
            <stop offset="70%" stopColor="rgba(60,80,255,0)" />
          </radialGradient>
        </defs>
-       <ellipse id="glow-1" cx="170" cy="200" rx="260" ry="170" fill="url(#g1)" />
-       <ellipse id="glow-2" cx="320" cy="210" rx="220" ry="140" fill="url(#g2)" />
-       <ellipse id="glow-3" cx="460" cy="210" rx="190" ry="130" fill="url(#g3)" />
-       <ellipse id="glow-4" cx="590" cy="220" rx="160" ry="110" fill="url(#g4)" />
-       <ellipse id="glow-5" cx="750" cy="220" rx="140" ry="100" fill="url(#g5)" />
-       <ellipse id="glow-6" cx="420" cy="170" rx="100" ry="80" fill="url(#g6)" />
+       <ellipse id="glow-1" cx="170" cy="220" rx="260" ry="190" fill="url(#g1)" />
+       <ellipse id="glow-2" cx="320" cy="230" rx="220" ry="150" fill="url(#g2)" />
+       <ellipse id="glow-3" cx="460" cy="230" rx="190" ry="140" fill="url(#g3)" />
+       <ellipse id="glow-4" cx="590" cy="240" rx="160" ry="120" fill="url(#g4)" />
+       <ellipse id="glow-5" cx="750" cy="240" rx="140" ry="110" fill="url(#g5)" />
+       <ellipse id="glow-6" cx="420" cy="190" rx="100" ry="80" fill="url(#g6)" />
      </svg>
 
      <div style={{ display:'flex', fontSize:10, fontWeight:700, color:'rgba(155,140,210,0.5)', letterSpacing:'3px' }}>
        TECH STACK
      </div>
-     <div style={{ display:'flex', flexDirection:'column', gap:14 }}>
-       {categories.map(function(cat) {
+     <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
+       {rows.map(function(row, ri) {
          return (
-           <div key={cat.title} style={{ display:'flex', alignItems:'center', gap:16 }}>
-             <div style={{ display:'flex', fontSize:10, fontWeight:700, color:cat.color, letterSpacing:'1px', width:80 }}>
-               {cat.title.toUpperCase()}
-             </div>
-             <div style={{ display:'flex', flexWrap:'wrap', gap:7 }}>
-               {cat.items.map(function(item) {
-                 return (
-                   <div key={item} style={{
-                     display:'flex', padding:'4px 13px', borderRadius:6,
-                     background:cat.color + '15', border:'1px solid ' + cat.color + '35',
-                     color:'rgba(225,220,255,0.85)', fontSize:12, fontWeight:600,
-                   }}>{item}</div>
-                 );
-               })}
-             </div>
+           <div key={ri} style={{ display:'flex', gap:8 }}>
+             {row.map(function(item) {
+               return (
+                 <div key={item} style={{
+                   display:'flex', padding:'5px 14px', borderRadius:6, height:28,
+                   alignItems:'center',
+                   background:'rgba(167,139,250,0.15)', border:'1px solid rgba(167,139,250,0.35)',
+                   color:'rgba(225,220,255,0.85)', fontSize:12, fontWeight:600, whiteSpace:'nowrap',
+                 }}>{item}</div>
+               );
+             })}
            </div>
          );
        })}
@@ -357,12 +368,12 @@
 })()
 ```
 
-```aura width=120 height=44 link="https://www.linkedin.com/in/lithin-jose" inline align=center
+```aura width=130 height=44 link="https://www.linkedin.com/in/lithin-jose" inline align=center
 <SocialMediaButton
   icon="https://raw.githubusercontent.com/l1thin/l1thin/main/icons/linkedin-icon.svg"
   text="Linkedin"
   backgroundColor="#000000"
-  width={120}
+  width={130}
   height={44}
   gradientStops={[
     { offset: '0%', color: '#b57af9' },
@@ -374,12 +385,12 @@
 />
 ```
 
-```aura width=110 height=44 link="mailto:lithinjosepulikkottil@gmail.com" inline align=center
+```aura width=130 height=44 link="mailto:lithinjosepulikkottil@gmail.com" inline align=center
 <SocialMediaButton
   icon="https://raw.githubusercontent.com/l1thin/l1thin/main/icons/gmail-icon.svg"
   text="Email"
   backgroundColor="#000000"
-  width={110}
+  width={130}
   height={44}
   gradientStops={[
     { offset: '0%', color: '#d855f7' },
