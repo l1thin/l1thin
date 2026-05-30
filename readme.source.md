@@ -412,7 +412,7 @@
 <div style={{ width:12, height:44 }} />
 ```
 
-```aura width=130 height=44 link="https://www.instagram.com/l1thin.in" inline align=center
+```aura width=130 height=44 link="https://www.instagram.com/l1thin/" inline align=center
 <SocialMediaButton
   icon="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
   text="Instagram"
