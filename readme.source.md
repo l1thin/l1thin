@@ -412,7 +412,7 @@
 <div style={{ width:12, height:44 }} />
 ```
 
-```aura width=130 height=44 link="https://www.instagram.com/l1thin/" inline align=center
+```aura width=130 height=44 link="https://www.instagram.com/l1thin?igsh=MWI4Z21md2d2YmJmaw==" inline align=center
 <SocialMediaButton
   icon="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
   text="Instagram"
@@ -430,5 +430,3 @@
 />
 ```
 
-
-<p align="center"><sub>𝗉𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href="https://github.com/collectioneur/readme-aura">𝗋𝖾𝖺𝖽𝗆𝖾-𝖺𝗎𝗋𝖺</a></sub></p>
