@@ -359,7 +359,7 @@
 
 ```aura width=120 height=44 link="https://www.linkedin.com/in/lithin-jose" inline align=center
 <SocialMediaButton
-  icon="https://raw.githubusercontent.com/l1thin/l1thin/main/icons/linkedin-icon.png"
+  icon="https://raw.githubusercontent.com/l1thin/l1thin/main/icons/linkedin-icon.svg"
   text="Linkedin"
   backgroundColor="#000000"
   width={120}
