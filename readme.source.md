@@ -322,3 +322,24 @@
 />
 ```
 
+```aura width=12 height=44 inline align=center
+<div style={{ width:12, height:44 }} />
+```
+
+```aura width=130 height=44 link="https://www.l1thin.me" inline align=center
+<SocialMediaButton
+  icon="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+  text="Portfolio"
+  iconSize="1"
+  backgroundColor="#000000"
+  width={130}
+  height={44}
+  gradientStops={[
+    { offset: '0%', color: '#6ee7b7' },
+    { offset: '30%', color: '#000000' },
+    { offset: '60%', color: '#34d399' },
+    { offset: '80%', color: '#000000' },
+    { offset: '100%', color: '#10b981' },
+  ]}
+/>
+```
